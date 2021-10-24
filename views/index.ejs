@@ -2,10 +2,14 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <form method="POST" action="/login">
+      <h1>로그인</h1>
+      <input type="text" name="id" placeholder="ID" />
+      <input type="password" name="pw" placeholder="Password" />
+      <button type="submit">Login</button>
+    </form>
   </body>
 </html>
