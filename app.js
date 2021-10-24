@@ -1,14 +1,19 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+import createError from "http-errors";
+import express from "express";
+import path from "path";
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-var loginRouter = require("./routes/login");
+import cookieParser from "cookie-parser";
+import logger from "morgan";
 
-var app = express();
+import indexRouter from "./routes/index";
+import usersRouter from "./routes/users";
+import loginRouter from "./routes/login";
+
+const db = require("./data/db");
+
+const app = express();
+
+db.defaults({ users: [] }).write();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
