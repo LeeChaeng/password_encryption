@@ -1,6 +1,6 @@
 import express from "express";
 import db from "../../data/db";
-import bctypt from "bcrypt";
+import bcrypt from "bcrypt";
 
 const router = express.Router();
 
@@ -10,11 +10,11 @@ router.post("/", function (req, res, next) {
 
   const saltRounds = 10;
 
-  bctypt
+  bcrypt
     .genSalt(saltRounds)
     .then((salt) => {
-      console.log(`Salt: ${salt}}`);
-      return bctypt.hash(pw, salt);
+      console.log(`Salt: ${salt}`);
+      return bcrypt.hash(pw, salt);
     })
     .then((hash) => {
       console.log(`Hash: ${hash}`);
