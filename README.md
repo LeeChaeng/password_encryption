@@ -4,7 +4,7 @@ Google Developer Student Club(GDSC) EWHA Devfest에서의 연사 세션을 위�
 
 ## 사용한 기술
 
-- [bctypt](https://www.npmjs.com/package/bcrypt)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
 - node.js
 - ejs
 - express
